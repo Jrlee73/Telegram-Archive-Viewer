@@ -25,7 +25,6 @@ Telegram's own "Export chat history" feature dumps a chat into a pile of HTML fi
 
 ### Install
 
-git clone https://github.com/z7zz1L/telegram-archive-viewer.git
 cd telegram-archive-viewer
 npm install
 ### Run in development
