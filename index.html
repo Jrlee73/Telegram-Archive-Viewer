@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' tg-media: blob: data:; media-src 'self' tg-media: blob: data:; connect-src 'self' tg-media: blob: data:;" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Telegram Archive Viewer</title>
+    <meta name="description" content="Streamlined, high-performance single-chat Telegram archive viewer with automatic root folder import and rich media support." />
+    <meta property="og:title" content="Telegram Archive Viewer" />
+    <meta property="og:description" content="Streamlined, high-performance single-chat Telegram archive viewer with automatic root folder import and rich media support." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('tav_theme');
+          if (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            theme = 'light';
+          }
+          theme = theme || 'dark';
+          var root = document.documentElement;
+          if (theme === 'night') {
+            root.classList.add('night', 'dark');
+            root.classList.remove('light');
+          } else if (theme === 'dark') {
+            root.classList.add('dark');
+            root.classList.remove('night', 'light');
+          } else {
+            root.classList.add('light');
+            root.classList.remove('dark', 'night');
+          }
+          var fontSize = localStorage.getItem('tav_bubble_font_size');
+          if (fontSize) {
+            root.style.setProperty('--bubble-font-size', fontSize + 'px');
+          }
+          var bubbleColor = localStorage.getItem('tav_bubble_color');
+          var colors = {
+            blue: '#2563eb',
+            emerald: '#059669',
+            violet: '#7c3aed',
+            amber: '#d97706',
+            rose: '#e11d48',
+            slate: '#334155'
+          };
+          if (bubbleColor && colors[bubbleColor]) {
+            root.style.setProperty('--bubble-self', colors[bubbleColor]);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

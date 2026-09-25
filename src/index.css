@@ -1,0 +1,352 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    --bubble-font-size: 13px;
+
+    /* Light Mode - Refined Neutral & Porcelain */
+    --bg-app: #f4f6f9;
+    --bg-surface: rgba(255, 255, 255, 0.90);
+    --bg-surface-solid: #ffffff;
+    --bg-surface-card: #f8fafc;
+    --bg-surface-hover: #edf2f7;
+    --border-subtle: rgba(15, 23, 42, 0.08);
+    --border-card: rgba(15, 23, 42, 0.06);
+    --text-main: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #8292a2;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-soft: rgba(37, 99, 235, 0.09);
+    --accent-border: rgba(37, 99, 235, 0.22);
+    --bubble-self: #2563eb;
+    --bubble-self-text: #ffffff;
+    --bubble-other: #ffffff;
+    --bubble-other-text: #0f172a;
+    --bubble-other-border: rgba(15, 23, 42, 0.08);
+    --bubble-service-bg: rgba(255, 255, 255, 0.92);
+    --bubble-service-text: #475569;
+    --glass-bg: rgba(255, 255, 255, 0.86);
+    --glass-border: rgba(15, 23, 42, 0.08);
+    --shadow-float: 0 16px 36px -8px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+    --shadow-bubble: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  }
+
+  /* Dark Mode - Deep Obsidian Slate & Calm Neon Blue */
+  .dark, :root.dark:not(.night) {
+    --bg-app: #0b0f17;
+    --bg-surface: rgba(18, 24, 36, 0.88);
+    --bg-surface-solid: #121824;
+    --bg-surface-card: #182030;
+    --bg-surface-hover: #1f2b3e;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-card: rgba(255, 255, 255, 0.05);
+    --text-main: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --accent-soft: rgba(59, 130, 246, 0.15);
+    --accent-border: rgba(59, 130, 246, 0.35);
+    --bubble-self: #2563eb;
+    --bubble-self-text: #ffffff;
+    --bubble-other: #182232;
+    --bubble-other-text: #f1f5f9;
+    --bubble-other-border: rgba(255, 255, 255, 0.05);
+    --bubble-service-bg: rgba(18, 24, 36, 0.85);
+    --bubble-service-text: #94a3b8;
+    --glass-bg: rgba(18, 24, 36, 0.82);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --shadow-float: 0 20px 40px -10px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+    --shadow-bubble: 0 1px 3px 0 rgba(0, 0, 0, 0.28);
+  }
+
+  /* Night Mode - OLED Deep Neutral & True Black */
+  .night, :root.night {
+    --bg-app: #000000;
+    --bg-surface: rgba(16, 16, 19, 0.94);
+    --bg-surface-solid: #101013;
+    --bg-surface-card: #151519;
+    --bg-surface-hover: #1c1c22;
+    --border-subtle: rgba(255, 255, 255, 0.09);
+    --border-card: rgba(255, 255, 255, 0.06);
+    --text-main: #f4f4f7;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --accent-soft: rgba(59, 130, 246, 0.14);
+    --accent-border: rgba(59, 130, 246, 0.32);
+    --bubble-self: #2563eb;
+    --bubble-self-text: #ffffff;
+    --bubble-other: #141418;
+    --bubble-other-text: #f4f4f7;
+    --bubble-other-border: rgba(255, 255, 255, 0.07);
+    --bubble-service-bg: rgba(20, 20, 25, 0.88);
+    --bubble-service-text: #a1a1aa;
+    --glass-bg: rgba(12, 12, 15, 0.92);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --shadow-float: 0 24px 50px -12px rgba(0, 0, 0, 0.95), 0 0 1px 1px rgba(255, 255, 255, 0.07);
+    --shadow-bubble: 0 1px 3px 0 rgba(0, 0, 0, 0.45);
+  }
+}
+
+html, body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Telegram Highlight Animations */
+@keyframes telegram-row-highlight-dark {
+  0% {
+    background-color: rgba(59, 130, 246, 0.28);
+  }
+  35% {
+    background-color: rgba(59, 130, 246, 0.20);
+  }
+  70% {
+    background-color: rgba(59, 130, 246, 0.08);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes telegram-bubble-highlight-dark {
+  0% {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.9), 0 0 24px rgba(59, 130, 246, 0.5);
+  }
+  30% {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.75), 0 0 18px rgba(59, 130, 246, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3), 0 0 10px rgba(59, 130, 246, 0.15);
+  }
+  100% {
+    box-shadow: var(--shadow-bubble);
+  }
+}
+
+.animate-message-highlight {
+  animation: telegram-row-highlight-dark 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-bubble-highlight {
+  animation: telegram-bubble-highlight-dark 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Modern Native Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 160, 185, 0.25);
+  border-radius: 9999px;
+  transition: background 0.15s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 160, 185, 0.45);
+}
+
+/* Glass UI Elements */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-modal {
+  background: var(--bg-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-float);
+}
+
+/* Standard Interaction feedback classes */
+.btn-press {
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-press:active {
+  transform: scale(0.96);
+}
+
+.card-hover {
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-1.5px);
+}
+
+/* Apple-style Fluid Expansion Animations */
+@keyframes apple-expand-down {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.88) translateY(-6px);
+    transform-origin: top center;
+  }
+  65% {
+    transform: scaleY(1.015) translateY(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+    transform-origin: top center;
+  }
+}
+
+@keyframes apple-spring-modal {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.01) translateY(-1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-expand-down {
+  animation: apple-expand-down 260ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top center;
+}
+
+.animate-apple-modal {
+  animation: apple-spring-modal 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Apple-style Floating Header Card Entrance */
+@keyframes apple-floating-header {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.985);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(1px) scale(1.003);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-floating-header {
+  animation: apple-floating-header 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Apple-style Floating Date Bubble Entrance & Spring */
+@keyframes apple-bubble-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.85);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(1px) scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-floating-date {
+  animation: apple-bubble-appear 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.motion-safe-transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, width, height, max-width, max-height;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 220ms;
+}
+
+.sidebar-transition {
+  transition: width 240ms cubic-bezier(0.16, 1, 0.3, 1),
+              padding 240ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Apple-style smooth transformation for floating button & left menu */
+.menu-trigger-btn {
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 240ms cubic-bezier(0.16, 1, 0.3, 1),
+              scale 320ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms ease;
+}
+
+.menu-drawer-panel {
+  transition: transform 340ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Horizontal scroll smooth container */
+.horizontal-scroll-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.horizontal-scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* iOS Grouped Inset Card Style */
+.ios-inset-group {
+  background-color: var(--bg-surface-card);
+  border: 1px solid var(--border-card);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.ios-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1rem;
+  transition: background-color 150ms ease;
+}
+
+.ios-row:not(:last-child) {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ios-row:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 4s linear infinite;
+}
