@@ -29,24 +29,24 @@ Telegram's own "Export chat history" feature dumps a chat into a pile of HTML fi
 -   with an auto-lock/auto-wipe timer for shared or unattended machines
   <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 10_00_03 PM" src="https://github.com/user-attachments/assets/ab41b58c-f4ff-4245-9ecf-801778fdd443" />
 
-- Theme-
+-Theme-
 - Light/dark themes and adjustable message font size
-- <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_16 PM" src="https://github.com/user-attachments/assets/43fbdad3-0446-47ba-abd0-2189e262554a" />
+<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_16 PM" src="https://github.com/user-attachments/assets/43fbdad3-0446-47ba-abd0-2189e262554a" />
 
 -dashboard-
-Overview dashboard
-performance
+-Overview dashboard
+-performance
 <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_08 PM" src="https://github.com/user-attachments/assets/9677f48c-08f5-4bb3-bd56-1d3675430d78" />
 
-Customize-
-Highly customizable interface
-diffrent color to choose
-Text Size
+-Customize-
+-Highly customizable interface
+-diffrent color to choose
+-Text Size
 <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_48 PM" src="https://github.com/user-attachments/assets/b1e599e7-5404-4a47-812f-54c98e13b2d7" />
 
-Prespective
-Different viewing modes
-He/she or Pov or Oberver
+-Prespective-
+-Different viewing modes
+-He/she or Pov or Oberver
 
 <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_36 PM" src="https://github.com/user-attachments/assets/8bbd4917-0eb6-4e45-a38c-a9aee4f2c50f" />
 
