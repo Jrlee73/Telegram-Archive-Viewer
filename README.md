@@ -8,7 +8,10 @@ Telegram's own "Export chat history" feature dumps a chat into a pile of HTML fi
 
 ## Features
 
-- Virtualized message list — smooth scrolling through chats with tens of thousands of messages, powered by @tanstack/react-virtual
+- Virtualized message list —
+- smooth scrolling through chats with tens of thousands of messages, powered by @tanstack/react-virtual
+<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_58_33 PM" src="https://github.com/user-attachments/assets/3f58b9a5-b093-40d9-be01-a8b0bbf72686" />
+
 - Full-text search — instant search across messages, senders, and dates, with jump-to-message and date navigation<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 10_00_51 PM" src="https://github.com/user-attachments/assets/e043423f-eb68-487c-ab20-cad5d534922a" />
 
 
