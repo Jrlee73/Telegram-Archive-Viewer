@@ -9,12 +9,50 @@ Telegram's own "Export chat history" feature dumps a chat into a pile of HTML fi
 ## Features
 
 - Virtualized message list — smooth scrolling through chats with tens of thousands of messages, powered by @tanstack/react-virtual
-- Full-text search — instant search across messages, senders, and dates, with jump-to-message and date navigation
-- Rich media support — photos, videos, voice messages, and animated stickers (real TGS/Lottie playback, not a placeholder)
-- Media gallery — browse all photos/videos in a chat in one place
-- Offline & local-first — runs on sql.js (SQLite compiled to WebAssembly) with local persistence; nothing leaves your machine
-- Optional PIN lock — lock the app behind a PIN (salted hash, not stored in plaintext) with an auto-lock/auto-wipe timer for shared or unattended machines
+- Full-text search — instant search across messages, senders, and dates, with jump-to-message and date navigation<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 10_00_51 PM" src="https://github.com/user-attachments/assets/e043423f-eb68-487c-ab20-cad5d534922a" />
+
+
+
+
+- Rich media support —
+- photos, videos, voice messages, and animated stickers (real TGS/Lottie playback, not a placeholder)<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_01 PM" src="https://github.com/user-attachments/assets/224ca46e-8fbc-478e-a300-faeddbdb90a7" />
+
+- Media gallery —
+- browse all photos/videos in a chat in one place
+  <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 10_00_15 PM" src="https://github.com/user-attachments/assets/cd6ec1b1-1217-437b-8d19-60715843b7f2" />
+
+- Offline & local-first —
+- runs on sql.js (SQLite compiled to WebAssembly) with local persistence; nothing leaves your machine
+- Optional PIN lock —
+-  lock the app behind a PIN
+-  (salted hash, not stored in plaintext)
+-   with an auto-lock/auto-wipe timer for shared or unattended machines
+  <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 10_00_03 PM" src="https://github.com/user-attachments/assets/ab41b58c-f4ff-4245-9ecf-801778fdd443" />
+
+- Theme-
 - Light/dark themes and adjustable message font size
+- <img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_16 PM" src="https://github.com/user-attachments/assets/43fbdad3-0446-47ba-abd0-2189e262554a" />
+
+-dashboard-
+Overview dashboard
+performance
+<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_08 PM" src="https://github.com/user-attachments/assets/9677f48c-08f5-4bb3-bd56-1d3675430d78" />
+
+Customize-
+Highly customizable interface
+diffrent color to choose
+Text Size
+<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_48 PM" src="https://github.com/user-attachments/assets/b1e599e7-5404-4a47-812f-54c98e13b2d7" />
+
+Prespective
+Different viewing modes
+He/she or Pov or Oberver
+
+<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 9_59_36 PM" src="https://github.com/user-attachments/assets/8bbd4917-0eb6-4e45-a38c-a9aee4f2c50f" />
+
+
+
+
 
 ## Getting Started
 
@@ -43,7 +81,9 @@ Produces an NSIS installer and a portable .exe in the release/ directory.
 ## Importing your Telegram export
 
 1. In Telegram Desktop, go to Settings → Advanced → Export Telegram data, choose a single chat, and export as HTML.
-2. In Telegram Archive Viewer, click Import and select the export folder (the one containing messages.html, photos/, stickers/, etc.).
+2. In Telegram Archive Viewer,click Import and select the export folder (the one containing messages.html, photos/, stickers/, etc.).
+<img width="1920" height="1080" alt="Telegram Archive Viewer 25_9_2026 10_07_53 PM" src="https://github.com/user-attachments/assets/022ceb8d-d697-4afe-abd9-6d9e4c00a471" />
+
 3. The app parses the HTML export into a local SQLite database and indexes it for search.
 
 Currently supports single-chat HTML exports produced by Telegram Desktop.
