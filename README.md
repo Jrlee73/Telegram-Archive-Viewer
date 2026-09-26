@@ -1,7 +1,5 @@
 # Telegram Archive Viewer
 
-A fast, offline, privacy-focused desktop app for browsing exported Telegram chat archives — built with Electron, React, TypeScript, and SQLite (via sql.js).
-
 Telegram's own "Export chat history" feature dumps a chat into a pile of HTML files, folders full of photos, and separate media files that are painful to browse. Telegram Archive Viewer turns that export into something that actually feels like Telegram: a searchable, scrollable, media-rich chat window — entirely on your machine, with no upload, no server, no account.
 
 > Not affiliated with, endorsed by, or officially connected to Telegram FZ-LLC or Telegram Messenger Inc. All Telegram trademarks belong to their respective owners.
